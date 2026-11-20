@@ -1,0 +1,23 @@
+<xf:if is="$category.isInsert()">
+	<xf:title>{{ phrase('sylphian_trophy_add_category') }}</xf:title>
+<xf:else />
+	<xf:title>{{ phrase('sylphian_trophy_edit_category') }} {$category.title}</xf:title>
+</xf:if>
+
+<xf:pageaction if="$category.isUpdate()">
+	<xf:button href="{{ link('trophies/category-delete', null, {'category_id': $category.category_id}) }}" icon="delete" overlay="true" />
+</xf:pageaction>
+
+<xf:form action="{{ link('trophies/category-save', null, {'category_id': $category.category_id}) }}" ajax="true" class="block">
+	<div class="block-container">
+		<div class="block-body">
+			<xf:textboxrow name="title" value="{$category.title}" maxlength="100"
+				label="{{ phrase('title') }}" />
+
+			<xf:numberboxrow name="display_order" value="{$category.display_order}"
+				label="{{ phrase('display_order') }}"
+				min="0" step="1" />
+		</div>
+		<xf:submitrow icon="save" sticky="true" />
+	</div>
+</xf:form>

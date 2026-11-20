@@ -1,0 +1,6 @@
+{
+    "from_class": "XF\\Admin\\Controller\\TrophyController",
+    "to_class": "Sylphian\\TrophyCategories\\XF\\Admin\\Controller\\TrophyController",
+    "execute_order": 10,
+    "active": true
+}

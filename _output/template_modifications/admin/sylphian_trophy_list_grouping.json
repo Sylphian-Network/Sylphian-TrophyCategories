@@ -1,0 +1,9 @@
+{
+    "template": "trophy_list",
+    "description": "Group trophies by category.",
+    "execution_order": 10,
+    "enabled": true,
+    "action": "str_replace",
+    "find": "\t\t\t\t\t<xf:foreach loop=\"$trophies\" value=\"$trophy\">\n\t\t\t\t\t\t<xf:datarow\n\t\t\t\t\t\t\tlabel=\"{$trophy.title}\"\n\t\t\t\t\t\t\thint=\"{{ phrase('points:') }} {$trophy.trophy_points}\"\n\t\t\t\t\t\t\thref=\"{{ link('trophies/edit', $trophy) }}\"\n\t\t\t\t\t\t\tdelete=\"{{ link('trophies/delete', $trophy) }}\" />\n\t\t\t\t\t</xf:foreach>",
+    "replace": "<xf:if is=\"$groupedTrophies is not empty\">\n\t\t\t\t\t<xf:foreach loop=\"$groupedTrophies\" value=\"$group\">\n\t\t\t\t\t\t<xf:if is=\"$group.category\">\n\t\t\t\t\t\t\t<xf:datarow rowtype=\"subsection\"\n\t\t\t\t\t\t\t\tlabel=\"{$group.category.title}\"\n\t\t\t\t\t\t\t\thref=\"{{ link('trophies/category-edit', null, {'category_id': $group.category.category_id}) }}\"\n\t\t\t\t\t\t\t\tdelete=\"{{ link('trophies/category-delete', null, {'category_id': $group.category.category_id}) }}\" />\n\t\t\t\t\t\t<xf:else />\n\t\t\t\t\t\t\t<xf:datarow rowtype=\"subsection\">\n\t\t\t\t\t\t\t\t<xf:cell colspan=\"2\">{{ phrase('sylphian_trophy_uncategorised') }}</xf:cell>\n\t\t\t\t\t\t\t</xf:datarow>\n\t\t\t\t\t\t</xf:if>\n\t\t\t\t\t\t<xf:foreach loop=\"$group.items\" value=\"$trophy\">\n\t\t\t\t\t\t\t<xf:datarow\n\t\t\t\t\t\t\t\tlabel=\"{$trophy.title}\"\n\t\t\t\t\t\t\t\thint=\"{{ phrase('points:') }} {$trophy.trophy_points}\"\n\t\t\t\t\t\t\t\thref=\"{{ link('trophies/edit', $trophy) }}\"\n\t\t\t\t\t\t\t\tdelete=\"{{ link('trophies/delete', $trophy) }}\" />\n\t\t\t\t\t\t</xf:foreach>\n\t\t\t\t\t</xf:foreach>\n<xf:else />\n$0\n</xf:if>"
+}

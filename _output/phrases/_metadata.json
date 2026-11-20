@@ -1,0 +1,38 @@
+{
+    "sylphian_trophy_add_category.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "3abd4b07c50c7ca7d319a77235f57c0d"
+    },
+    "sylphian_trophy_category.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "3adbdb3ac060038aa0e6e6c138ef9873"
+    },
+    "sylphian_trophy_edit_category.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "708d9dee4751f6ab035a315479fffe70"
+    },
+    "sylphian_trophy_other_trophies.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "ec60af7974e727c741e13045637c745b"
+    },
+    "sylphian_trophy_uncategorised.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "671fdee4789681821d9457f232c83f2e"
+    },
+    "sylphian_trophy_x_trophies.txt": {
+        "global_cache": false,
+        "version_id": 1000010,
+        "version_string": "1.0.0 Alpha",
+        "hash": "2c69a64ee2d64b3334d9a5c69152b1ba"
+    }
+}

@@ -1,0 +1,20 @@
+{
+    "admin/sylphian_trophy_edit_category.json": {
+        "hash": "cdc060dcd5f2296efa5f8747ea696337"
+    },
+    "admin/sylphian_trophy_list_grouping.json": {
+        "hash": "afd7547d8c0b0fade79959276c0c6dba"
+    },
+    "admin/sylphian_trophy_list_pageaction.json": {
+        "hash": "66243ed50989f02683b370c7f4bd2f7a"
+    },
+    "public/sylphian_trophy_about_grouping.json": {
+        "hash": "e215de9c50bcf7cbf1f9e412a6d87f49"
+    },
+    "public/sylphian_trophy_help_grouping.json": {
+        "hash": "e99d208d8f4a0bd04c2e6d6772478685"
+    },
+    "public/sylphian_trophy_member_grouping.json": {
+        "hash": "7dd8bb97cfdf955f7e2893768ee035ed"
+    }
+}

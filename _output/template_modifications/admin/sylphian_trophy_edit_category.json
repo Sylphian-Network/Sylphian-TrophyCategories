@@ -1,0 +1,9 @@
+{
+    "template": "trophy_edit",
+    "description": "Add the category select.",
+    "execution_order": 10,
+    "enabled": true,
+    "action": "str_replace",
+    "find": "\t\t\t\t<xf:numberboxrow name=\"trophy_points\" value=\"{$trophy}\"\n\t\t\t\t\tlabel=\"{{ phrase('trophy_points') }}\"\n\t\t\t\t\texplain=\"{{ phrase('points_can_be_used_track_progression_and_change_title') }}\" />",
+    "replace": "$0\n\n\t\t\t\t<xf:selectrow name=\"sylphian_category_id\" value=\"{$trophy.sylphian_category_id}\"\n\t\t\t\t\tlabel=\"{{ phrase('sylphian_trophy_category') }}\">\n\t\t\t\t\t<xf:option value=\"0\">({{ phrase('none') }})</xf:option>\n\t\t\t\t\t<xf:options source=\"$trophyCategories\" />\n\t\t\t\t</xf:selectrow>"
+}

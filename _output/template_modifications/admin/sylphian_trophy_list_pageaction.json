@@ -1,0 +1,9 @@
+{
+    "template": "trophy_list",
+    "description": "Add the add category button.",
+    "execution_order": 10,
+    "enabled": true,
+    "action": "str_replace",
+    "find": "<xf:button href=\"{{ link('trophies/add') }}\" icon=\"add\">{{ phrase('add_trophy') }}</xf:button>",
+    "replace": "$0\n\t<xf:button href=\"{{ link('trophies/category-add') }}\" icon=\"add\">{{ phrase('sylphian_trophy_add_category') }}</xf:button>"
+}
