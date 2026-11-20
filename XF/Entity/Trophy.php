@@ -15,6 +15,22 @@ use XF\Mvc\Entity\Structure;
  */
 class Trophy extends XFCP_Trophy
 {
+	protected function verifySylphianCategoryId(&$categoryId)
+	{
+		if ($categoryId > 0)
+		{
+			$category = $this->_em->find(Category::class, $categoryId);
+
+			if (!$category)
+			{
+				$this->error(\XF::phrase('sylphian_trophy_please_select_valid_category'), 'sylphian_category_id');
+				return false;
+			}
+		}
+
+		return true;
+	}
+
 	public static function getStructure(Structure $structure)
 	{
 		$structure = parent::getStructure($structure);
